@@ -19,6 +19,22 @@ ui <- fluidPage(
                                              tags$h2("Exemple Tag",
                                                      style="color:blue",
                                                      align="center"),
+                                             
+                                             radioButtons("chx",
+                                                          label = dataTest$Question[r],
+                                                          choices = c(dataTest$RepA[r],
+                                                                      dataTest$RepB[r],
+                                                                      dataTest$RepC[r],
+                                                                      dataTest$RepD[r])
+                                                          ),
+                                             
+                                             actionButton("btnRep1",
+                                                          "Valider la saisie",
+                                                          align = "center"
+                                                          ),
+                                            
+                                             textOutput("txtRep")
+                                             
                                              )
                                 ),
                                        
