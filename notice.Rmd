@@ -17,16 +17,13 @@ Notre application **Shiny** s'inspire du jeu télévisé "*N'oubliez pas les par
 
 Les caractéristiques de l'application :
 
-* Nombre de joueur·se·s : **2 ou plus ?**
+* But du jeu : obtenir 5 points
+* Nombre de joueur·se·s : 2
 * L'application affiche une phrase de chanson et propose 4 réponses. 
 * On ne peut cocher qu'une seule réponse
   * 1 réponse juste vaut 1 point
   * 1 réponse fausse vaut 0 point
 * Les points sont enregistrés à chaque tour
-* Si la réponse est 
-  * juste : **rejouer ?**
-  * fausse : au suivant
-* Pour gagner, il faut atteindre 5 points en premier.
 
 ## La partie des statistiques
 Des statistiques peuvent être effectuées sur :
