@@ -26,9 +26,13 @@ ui <- fluidPage(
                                              tags$h5("Réponse 3 : ",dataTest$RepC[r]),
                                              tags$h5("Réponse 4 : ",dataTest$RepD[r]),
                                              
-                                             selectInput("repUser",
+                                             numericInput("repUser",
                                                        "Numéro de la réponse : ",
-                                                       choices = c("1","2","3",4)
+                                                       #choices = c(1,2,3,4)
+                                                       value = 1,
+                                                       min = 1,
+                                                       max = 4,
+                                                       step = 1
                                                        ),
                                              
 

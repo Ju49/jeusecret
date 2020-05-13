@@ -2,12 +2,10 @@ library(shiny)
 
 server <- function(input, output,session){
   
+  #col <- as.numeric(input$repUser)
+  
   observeEvent(input$btnRep1,
-                output$txtRep1 <- renderText({
-                  paste0(dataRes[r,input$repUser])})
-                  #paste0(input$repUser)}) #MARCHE
-                  #paste0(r)}) #MARCHE
-                  
+                output$txtRep1 <- renderText(dataRes[r,isolate(input$repUser+1)])
                )
 }
                
