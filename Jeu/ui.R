@@ -20,24 +20,22 @@ ui <- fluidPage(
                                                      style="color:blue",
                                                      align="center"),
                                              
-                                             radioButtons("chx",
-                                                          label = dataTest$Question[r],
-                                                          choices = c(dataTest$RepA[r],
-                                                                      dataTest$RepB[r],
-                                                                      dataTest$RepC[r],
-                                                                      dataTest$RepD[r])
-                                                          ),
+                                             tags$h3(dataTest$Question[r],align="center"),
+                                             tags$h5("Réponse 1 : ",dataTest$RepA[r]),
+                                             tags$h5("Réponse 2 : ",dataTest$RepB[r]),
+                                             tags$h5("Réponse 3 : ",dataTest$RepC[r]),
+                                             tags$h5("Réponse 4 : ",dataTest$RepD[r]),
                                              
+                                             textInput("repUser",
+                                                       "Numéro de la réponse : "), #vérif à faire : numérique 1-4 
+                                             
+
                                              actionButton("btnRep1",
                                                           "Valider la saisie",
                                                           align = "center"
                                                           ),
                                             
-                                             textOutput("txtRep1"),
-                                             textOutput("txtRep2"),
-                                             textOutput("txtRep3"),
-                                             textOutput("txtRep4"),
-                                             textOutput("txtRep5")
+                                             textOutput("txtRep1")
                                              
                                              )
                                 ),
