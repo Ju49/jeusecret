@@ -33,7 +33,11 @@ ui <- fluidPage(
                                                           align = "center"
                                                           ),
                                             
-                                             textOutput("txtRep")
+                                             textOutput("txtRep1"),
+                                             textOutput("txtRep2"),
+                                             textOutput("txtRep3"),
+                                             textOutput("txtRep4"),
+                                             textOutput("txtRep5")
                                              
                                              )
                                 ),
