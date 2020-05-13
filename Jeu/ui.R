@@ -26,8 +26,10 @@ ui <- fluidPage(
                                              tags$h5("Réponse 3 : ",dataTest$RepC[r]),
                                              tags$h5("Réponse 4 : ",dataTest$RepD[r]),
                                              
-                                             textInput("repUser",
-                                                       "Numéro de la réponse : "), #vérif à faire : numérique 1-4 
+                                             selectInput("repUser",
+                                                       "Numéro de la réponse : ",
+                                                       choices = c("1","2","3",4)
+                                                       ),
                                              
 
                                              actionButton("btnRep1",

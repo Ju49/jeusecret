@@ -1,5 +1,4 @@
-Question;La rep est;Le res est;La ville est
-RepA;VRAI;FAUX;FAUX
-RepB;FAUX;VRAI;FAUX
-RepC;FAUX;FAUX;FAUX
-RepD;FAUX;FAUX;VRAI
+Question;RepA;RepB;RepC;RepD
+La rep est;VRAI;FAUX;FAUX;FAUX
+Le res est;FAUX;VRAI;FAUX;FAUX
+La ville est;FAUX;FAUX;FAUX;VRAI
