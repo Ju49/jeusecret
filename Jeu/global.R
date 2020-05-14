@@ -1,7 +1,7 @@
 library(shiny)
 
-dataTest <- read.csv("TestEch.csv",sep=";",header=TRUE);dataTest
-dataRes <- read.csv("TestRes.csv",sep=";",header=TRUE);dataRes
+dataOrigin <- read.csv("TestEch.csv",sep=";",header=TRUE);dataOrigin
+dataTest <- dataOrigin[sample(1:nrow(dataOrigin),5),];dataTest
 
 source('ui.R', local = TRUE)
 source('server.R')

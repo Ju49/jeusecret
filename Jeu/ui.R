@@ -13,18 +13,13 @@ ui <- fluidPage(
                                  style="color:green", 
                                  align="center"),
                                        
-                         column(4,
+                         column(12,
                                 sidebarPanel(width=80,
-                                                           
-                                             #tags$h2("Jeu",
-                                                     #style="color:blue",
-                                                     #align="center"),
                                              
-                                             #tags$h3(dataTest$Question[r],align="center"),
-                                             #tags$h5("Réponse 1 : ",dataTest$RepA[r]),
-                                             #tags$h5("Réponse 2 : ",dataTest$RepB[r]),
-                                             #tags$h5("Réponse 3 : ",dataTest$RepC[r]),
-                                             #tags$h5("Réponse 4 : ",dataTest$RepD[r]),
+                                             actionButton("btnQues1",
+                                                          "Nouvelle Question",
+                                                          align = "center"
+                                             ),
                                              
                                              uiOutput("quest"),
                                              uiOutput("rep1"),
@@ -56,16 +51,6 @@ ui <- fluidPage(
                                              
                                              )
                                 ),
-                                       
-                         column(8,
-                                sidebarPanel(width=200,
-                                                           
-                                             tags$h3("Phrases enregistrées",
-                                                     style="color:blue",
-                                                     align="center"),                                       
-                                             )
-                                              
-                                ),
                          ),
                                      
                        fluidRow(
@@ -73,18 +58,6 @@ ui <- fluidPage(
                                               
                                 )
                          )
-                                     
-                       ),
-              
-              tabPanel("Paramètres",
-                                     
-                       tags$h1("Paramétrage du jeu",
-                               style="color:black",
-                               align="center"),
-                                     
-                       column(3,offset=15
-                                            
-                              )
                        )
               )
   )
