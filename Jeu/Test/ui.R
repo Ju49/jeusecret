@@ -12,12 +12,7 @@ ui <- fluidPage(
                                        
                          column(12,
                                 sidebarPanel(width=80,
-                                             
-                                             actionButton("btnQues1",
-                                                          "Nouvelle Question",
-                                                          align = "center"
-                                                          ),
-                                             
+  
                                              uiOutput("quest"),
                                              uiOutput("rep1"),
                                              uiOutput("rep2"),
@@ -75,7 +70,7 @@ ui <- fluidPage(
                                              
                                              textInput("index",
                                                        label = "Index",
-                                                       value = 1)
+                                                       value = 2)
                                              
                                              )
                                 )
