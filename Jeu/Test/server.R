@@ -1,6 +1,11 @@
 library(shiny)
 
 server <- function(input, output,session){
+  
+  
+  
+  #Charlène & Co fais mumuse pour les catégories
+  #Charlène  & Co fais mumuse pour les index avec for
 
   output$image1<- renderUI(img(src = 'Location_dot_grey.svg.png', height = '20px', width = '20px'))
   output$image2<- renderUI(img(src = 'Location_dot_grey.svg.png', height = '20px', width = '20px'))
