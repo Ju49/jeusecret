@@ -13,8 +13,9 @@ ui <- fluidPage(
                          column(12,
                                 sidebarPanel(width=80,
                                              
-                                             selectInput("catego", "Sélectionner une catégorie: ", selected = 2,
-                                                         choices = c("Paroles de chansons" = 1, 
+                                             selectInput("catego", "Sélectionner une catégorie: ", 
+                                                         selected = 2, multiple = FALSE,
+                                                         choices = c("Paroles de chansons" = 1,  
                                                                      "Répliques de films" = 2)),
                                              
   

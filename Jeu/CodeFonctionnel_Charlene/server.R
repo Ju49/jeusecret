@@ -15,7 +15,7 @@ server <- function(input, output,session){
       dataOrigin <- read.csv("Paroles.csv",sep=";",header=TRUE);dataOrigin
     }
     else {
-      dataOrigin <- read.csv("Repliques.csv",sep=";",header=TRUE);dataOrigin
+      dataOrigin <- read.csv("Replique.csv",sep=";",header=TRUE);dataOrigin
     }
     
     dataTest <- dataOrigin[sample(1:nrow(dataOrigin),5),];dataTest 
@@ -31,6 +31,7 @@ server <- function(input, output,session){
     output$rep2<- renderUI(tags$h5("Réponse 2 : ",dataTest$RepB[1]))
     output$rep3<- renderUI(tags$h5("Réponse 3 : ",dataTest$RepC[1]))
     output$rep4<- renderUI(tags$h5("Réponse 4 : ",dataTest$RepD[1]))
+    
     
     observeEvent(input$btnRep1, {
       
