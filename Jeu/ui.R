@@ -20,11 +20,17 @@ ui <- fluidPage(
                                                      #style="color:blue",
                                                      #align="center"),
                                              
-                                             tags$h3(dataTest$Question[r],align="center"),
-                                             tags$h5("Réponse 1 : ",dataTest$RepA[r]),
-                                             tags$h5("Réponse 2 : ",dataTest$RepB[r]),
-                                             tags$h5("Réponse 3 : ",dataTest$RepC[r]),
-                                             tags$h5("Réponse 4 : ",dataTest$RepD[r]),
+                                             #tags$h3(dataTest$Question[r],align="center"),
+                                             #tags$h5("Réponse 1 : ",dataTest$RepA[r]),
+                                             #tags$h5("Réponse 2 : ",dataTest$RepB[r]),
+                                             #tags$h5("Réponse 3 : ",dataTest$RepC[r]),
+                                             #tags$h5("Réponse 4 : ",dataTest$RepD[r]),
+                                             
+                                             uiOutput("quest"),
+                                             uiOutput("rep1"),
+                                             uiOutput("rep2"),
+                                             uiOutput("rep3"),
+                                             uiOutput("rep4"),
                                              
                                              numericInput("repUser",
                                                        "Numéro de la réponse : ",
