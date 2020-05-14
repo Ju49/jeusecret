@@ -12,6 +12,11 @@ ui <- fluidPage(
                                        
                          column(12,
                                 sidebarPanel(width=80,
+                                             
+                                             selectInput("catego", "Sélectionner une catégorie: ", selected = 2,
+                                                         choices = c("Paroles de chansons" = 1, 
+                                                                     "Répliques de films" = 2)),
+                                             
   
                                              uiOutput("quest"),
                                              uiOutput("rep1"),
@@ -39,6 +44,7 @@ ui <- fluidPage(
                                              uiOutput("image3"),
                                              uiOutput("image4"),
                                              uiOutput("image5")
+                                             
                                              
                                              )
                                 ),
