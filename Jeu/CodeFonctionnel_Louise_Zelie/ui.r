@@ -4,7 +4,9 @@ library(shiny)
 
 ui <- fluidPage(
   
-  column(6,
+        tags$h1 ("Presentation generale des utilisateurs:", style= "color:dark", align= "center"),
+  
+   column(6,
          tags$h2("Joueur 1",style="color:blue",align= "center"),
          sidebarPanel(width=80,
                       textInput ("name1", "Indiquez votre prenom:"),
@@ -28,6 +30,8 @@ ui <- fluidPage(
   )
 ),
   
+        tags$h2("Recuperation des donnees:", style= "color:dark", align= "center"),
+
 fluidRow(
   column(8,
          offset = 4,
