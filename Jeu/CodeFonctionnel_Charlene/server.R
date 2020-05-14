@@ -3,10 +3,6 @@ library(shiny)
 server <- function(input, output,session){
   
   
-  
-  #Charlène & Co fais mumuse pour les catégories
-  #Charlène  & Co fais mumuse pour les index avec for
-  
   observeEvent(input$catego, {
     
     categorie <- input$catego
@@ -56,9 +52,8 @@ server <- function(input, output,session){
                            value = input$index)
       }
       
-      
       if(input$valeurIndex ==1){
-        if(dataTest[input$valeurIndex,isolate(input$repUser+5)]=="FAUX")
+        if(dataTest[input$valeurIndex,isolate(as.numeric(input$repUser)+5)]=="FAUX")
           output$image1<- renderUI(img(src = '200px-Red_Dot.svg.png', height = '20px', width = '20px'))
         else {
           output$image1<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px'))
@@ -66,7 +61,7 @@ server <- function(input, output,session){
       }
       
       else if (input$valeurIndex==2){
-        if(dataTest[input$valeurIndex,isolate(input$repUser+5)]=="FAUX")
+        if(dataTest[input$valeurIndex,isolate(as.numeric(input$repUser)+5)]=="FAUX")
           output$image2<- renderUI(img(src = '200px-Red_Dot.svg.png', height = '20px', width = '20px'))
         else {
           output$image2<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px'))
@@ -74,7 +69,7 @@ server <- function(input, output,session){
       }
       
       else if (input$valeurIndex==3){
-        if(dataTest[input$valeurIndex,isolate(input$repUser+5)]=="FAUX")
+        if(dataTest[input$valeurIndex,isolate(as.numeric(input$repUser)+5)]=="FAUX")
           output$image3<- renderUI(img(src = '200px-Red_Dot.svg.png', height = '20px', width = '20px'))
         else {
           output$image3<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px'))
@@ -82,7 +77,7 @@ server <- function(input, output,session){
       }
       
       else if (input$valeurIndex==4){
-        if(dataTest[input$valeurIndex,isolate(input$repUser+5)]=="FAUX")
+        if(dataTest[input$valeurIndex,isolate(as.numeric(input$repUser)+5)]=="FAUX")
           output$image4<- renderUI(img(src = '200px-Red_Dot.svg.png', height = '20px', width = '20px'))
         else {
           output$image4<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px'))
@@ -90,12 +85,12 @@ server <- function(input, output,session){
       }
       
       else if (input$valeurIndex==5){1
-        if(dataTest[input$valeurIndex,isolate(input$repUser+5)]=="FAUX")
+        if(dataTest[input$valeurIndex,isolate(as.numeric(input$repUser)+5)]=="FAUX")
           output$image5<- renderUI(img(src = '200px-Red_Dot.svg.png', height = '20px', width = '20px'))
         else {
           output$image5<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px'))
           Gain <- Gain + 1 }
-        output$quest <-  renderUI(tags$h3("Bravo! vous avez répondu à toutes les questions !"))
+        output$quest <-  renderUI(tags$h2("Bravo! vous avez répondu à toutes les questions !"))
           #renderText("Bravo! vous avez répondu à toutes les questions et vous avez obtenu ", Gain, "points" )
           #problème la valeur de Gain n'est pas bonne, elle reste à 1
       }

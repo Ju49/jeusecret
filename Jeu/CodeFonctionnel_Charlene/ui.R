@@ -25,14 +25,12 @@ ui <- fluidPage(
                                              uiOutput("rep3"),
                                              uiOutput("rep4"),
                                              
-                                             numericInput("repUser",
-                                                       "Numéro de la réponse : ",
-                                                       value = 1,
-                                                       min = 1,
-                                                       max = 4,
-                                                       step = 1
-                                                       ),
-
+                                             selectInput("repUser",
+                                                         "Numéro de la réponse : ",
+                                                         selected = 4, multiple = FALSE,
+                                                         choices = c("Réponse 1" = 1, "Réponse 2" = 2, 
+                                                                     "Réponse 3" = 3, "Réponse 4" = 4 )),
+                                             
                                              actionButton("btnRep1",
                                                           "Valider la saisie",
                                                           align = "center"
