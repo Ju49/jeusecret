@@ -54,4 +54,8 @@ La même application peut présenter un onglet par "jeu".
 
 # Rédaction du code 
 
+Pour la rédaction du code, nous avons décidé de nous répartir les tâches par sous-groupe, afin de faciliter le travail à distance. Ceci s'est très bien déroulé, et nous nous sommes entraidés mutuellement. 
+
+* Le but de la première partie a été de créer un code afin d'enregistrer les données des deux utilisateurs, nommées respectivement joueur 1 et joueur 2.Ils pourront par la suite jouer au Quizz que nous leurs proposons.
+  Nous avons donc définie les deux joueurs avec les caractéristiques suivantes : prénom, nom de famille, âge, nationalité, profession et le sexe de l'utilisateur. Une fois ces données complétées, elles seront affichées directement dans un tableau récapitulatif et pourront être récupérées dans un fichier à part.
 
