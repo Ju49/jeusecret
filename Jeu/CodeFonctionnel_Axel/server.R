@@ -2,7 +2,15 @@ library(shiny)
 library(knitr)
 
 server <- function(input, output,session){
-
+  
+  dataOrigin <- read.csv("TestEch.csv",sep=";",header=TRUE);dataOrigin
+  dataTest <- dataOrigin[sample(1:nrow(dataOrigin),5),];dataTest
+  
+  #eventReactive(input$categ,
+  #             dataOrigin <- read.csv(input$categ,sep=";",header=TRUE),
+  #             dataTest <- dataOrigin[sample(1:nrow(dataOrigin),5),]
+  #)
+  
   output$image1<- renderUI(img(src = 'Location_dot_grey.svg.png', height = '20px', width = '20px'))
   output$image2<- renderUI(img(src = 'Location_dot_grey.svg.png', height = '20px', width = '20px'))
   output$image3<- renderUI(img(src = 'Location_dot_grey.svg.png', height = '20px', width = '20px'))

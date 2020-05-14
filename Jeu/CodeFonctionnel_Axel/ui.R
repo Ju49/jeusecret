@@ -80,7 +80,14 @@ ui <- fluidPage(
                                              
                                             textInput("index",
                                                       label = "Index",
-                                                      value = 2)
+                                                      value = 2),
+                                            
+                                            #selectInput("categ",
+                                            #            "Sélection de catégories",
+                                            #            choices = c('"TestEch.csv"','"QuizzCinema.csv"'),
+                                            #            selected = 1)
+                                            
+                                            
                                             )
                                )
                         )
