@@ -7,18 +7,18 @@ ui <- fluidPage(
                 
   tabsetPanel(id="tabset",
                             
-              tabPanel("PANNEAU 1",
+              tabPanel("Jeu",
                        fluidRow(
-                         tags$h1("TAG PANNEAU 1",
+                         tags$h1("Le jeu des questions !",
                                  style="color:green", 
                                  align="center"),
                                        
-                         column(3,
+                         column(4,
                                 sidebarPanel(width=80,
                                                            
-                                             tags$h2("Exemple Tag",
-                                                     style="color:blue",
-                                                     align="center"),
+                                             #tags$h2("Jeu",
+                                                     #style="color:blue",
+                                                     #align="center"),
                                              
                                              tags$h3(dataTest$Question[r],align="center"),
                                              tags$h5("Réponse 1 : ",dataTest$RepA[r]),
@@ -28,7 +28,6 @@ ui <- fluidPage(
                                              
                                              numericInput("repUser",
                                                        "Numéro de la réponse : ",
-                                                       #choices = c(1,2,3,4)
                                                        value = 1,
                                                        min = 1,
                                                        max = 4,
@@ -41,15 +40,21 @@ ui <- fluidPage(
                                                           align = "center"
                                                           ),
                                             
-                                             textOutput("txtRep1")
+                                             textOutput("txtRep1"),
+                                             
+                                             uiOutput("image1"),
+                                             uiOutput("image2"),
+                                             uiOutput("image3"),
+                                             uiOutput("image4"),
+                                             uiOutput("image5")
                                              
                                              )
                                 ),
                                        
-                         column(5,offset=4,
+                         column(8,
                                 sidebarPanel(width=200,
                                                            
-                                             tags$h3("Exemple Tag",
+                                             tags$h3("Phrases enregistrées",
                                                      style="color:blue",
                                                      align="center"),                                       
                                              )
@@ -65,9 +70,9 @@ ui <- fluidPage(
                                      
                        ),
               
-              tabPanel("PANNEAU 2",
+              tabPanel("Paramètres",
                                      
-                       tags$h1("TAG PANNEAU 2",
+                       tags$h1("Paramétrage du jeu",
                                style="color:black",
                                align="center"),
                                      
