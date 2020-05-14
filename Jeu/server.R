@@ -22,9 +22,26 @@ server <- function(input, output,session){
   
   observeEvent(input$btnRep1,
                
-               if(dataTest[r+1,isolate(input$repUser+5)]=="FAUX")
+               if(dataTest[r+1,isolate(input$repUser+5)]=="FAUX") {
                  output$image1<- renderUI(img(src = '200px-Red_Dot.svg.png', height = '20px', width = '20px'))
-               else
-                 output$image1<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px')),
+                
+                 }
+                 
+               else {
+                 output$image1<- renderUI(img(src = '200px-Green_Dot.svg.png', height = '20px', width = '20px'))
+                 r <- r + 1
+                 output$quest<- renderUI(tags$h3(dataTest$Question[r+1],align="center"))
+                 output$rep1<- renderUI(tags$h5("Réponse 1 : ",dataTest$RepA[r+1]))
+                 output$rep2<- renderUI(tags$h5("Réponse 2 : ",dataTest$RepB[r+1]))
+                 output$rep3<- renderUI(tags$h5("Réponse 3 : ",dataTest$RepC[r+1]))
+                 output$rep4<- renderUI(tags$h5("Réponse 4 : ",dataTest$RepD[r+1]))
+                 
+                 
+               }
+                
                )
+  
+
+                 
+               
 }
