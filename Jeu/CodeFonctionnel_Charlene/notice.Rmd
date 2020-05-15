@@ -1,0 +1,63 @@
+---
+title: "Quizz : N'oubliez pas les paroles !"
+author: "Louise ARSAC (*Louise-Arsac*), Axel FALIGOT-GIRARDELLI (*Cynism*), Zélie FROMENT (*zeliefroment*), Charlène LAROCHE (*chalarock*), Juliette MAYER (*Ju49*),  Paul SERVAIN (*greenwasher*)"
+date: "13/05/2020"
+output:
+    html_document:
+      fig_caption: yes
+      number_sections: yes
+      toc: yes
+      toc_depth: 3
+      toc_float: yes
+---
+
+# Principe de l'application
+
+Notre application **Shiny** s'inspire du jeu télévisé "*N'oubliez pas les paroles !*" et fonctionne sur le principe d'un jeu de questions.
+
+Les caractéristiques de l'application :
+
+* But du jeu : obtenir 5 points
+* Nombre de joueur·se·s : 2
+* L'application affiche une phrase de chanson et propose 4 réponses. 
+* On ne peut choisir qu'une seule réponse
+  * 1 réponse juste vaut 1 point
+  * 1 réponse fausse vaut 0 point
+* Les points sont enregistrés à chaque tour
+
+## La partie des statistiques
+Des statistiques peuvent être effectuées sur :
+
+* les questions
+  * quelle réponse est la plus connue / juste le plus souvent ?
+  * quelle réponse est la moins connue / fausse le plus souvent ?
+* les joueurs et les joueuses
+  * qui donne le plus de bonnes réponses ?
+
+## Autres utilisations possibles de notre application
+
+Nous avons fait le choix de remplir deux fichiers .csv avec des paroles de chansons pour l'un et des répliques de film pour l'autre, pour rendre notre application ludique. Mais on peut créer de nouveau fichier avec d'autres éléments et ainsi multiplier les solutions d'utilisation de notre application : 
+
+* Paroles de chansons
+  * Si vous aimez chanter (comme vu ci-dessus)
+* Répliques de films
+  * Pour les plus cinéphiles
+* Code de la route
+  * Pour les autos-écoles
+* Questions de culture générale
+  * Pour s'amuser en famille pendant le confinement
+* Questions de cours
+  * Pour les profs adeptent de R-Shiny
+* ...
+
+L'application possède un menu déroulant où l'on peut sélectionner le type de questions auquel on souhaite répondre.
+
+
+# Rédaction du code 
+
+Pour la rédaction du code, nous avons décidé de nous répartir les tâches par sous-groupe, afin de faciliter le travail à distance. Ceci s'est très bien déroulé, et nous nous sommes entraidés mutuellement. 
+
+* Le but de la première partie a été de créer un code afin d'enregistrer les données des deux utilisateurs, nommées respectivement joueur 1 et joueur 2. Ils pourront par la suite jouer au Quizz que nous leurs proposons.
+  Nous avons donc définie les deux joueurs avec les caractéristiques suivantes : prénom, nom de famille, âge, nationalité, profession et le sexe de l'utilisateur. Une fois ces données complétées, elles seront affichées directement dans un tableau récapitulatif et pourront être récupérées dans un fichier à part.
+
+
