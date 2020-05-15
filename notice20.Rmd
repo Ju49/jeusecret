@@ -40,18 +40,17 @@ Pour la rédaction du code, nous avons décidé de nous répartir les tâches pa
 * Une variable `input$valeurIndex`, qui correspond au numéro de la ligne de question, va permettre de changer de question. Cette variable vaut 1 au lancement de l'application, puis va augmenter de 1 à chaque fois que le joueur cliquera sur le bouton "valider la saisie" pour passer à la question suivante. 
 * Lorsque le joueur clique sur le bouton "valider la saisie", la valeur saisie par l'utilisateur `input$repUser` est récupérée. Ainsi, les coordonnées de cette réponse seront `(input$valeurIndex,input$repUser)`. Cela va permettre au code de récupérer la valeur VRAI/FAUX associée à la réponse choisie.Ainsi, si la valeur est "VRAI", une image représentant un point vert sera affichée au bas de l'écran, si c'est "FAUX", une image représentant un point rouge sera affichée.
 
-# Liste de différentes fonctionnalités & paramètre squi pourraient être améliorés
+# Liste de différentes fonctionnalités & paramètres qui pourraient être améliorés
 
 * Jouer à deux sur ce jeu nécessite de créer 2 interfaces et de bloquer les boutons du joueur qui ne joue pas, ce que nous n'avons pas réussi à faire.
 * Bloquer l'accès à l'onglet "Paramètres", pour empêcher le joueur de les modifier, ce qui peut entraîner le disfonctionnement de l'application.
-
-* Des statistiques pourraient être effectuées sur :
-
+* Associer les scores obtenus aux quizz avec les caractéritisques des utilisateurs (Prénom,Nom,Age,Sexe) dans le csv qui est généré.
+* Avec ces scores enregistrés, faire des statistiques sur :
+  * les joueurs et les joueuses
+    * qui donne le plus de bonnes réponses ?
   * les questions
     * quelle réponse est la plus connue / juste le plus souvent ?
     * quelle réponse est la moins connue / fausse le plus souvent ?
-  * les joueurs et les joueuses
-    * qui donne le plus de bonnes réponses ?
 
 * Pouvoir rejouer sans avoir à relancer l'appli.
 
