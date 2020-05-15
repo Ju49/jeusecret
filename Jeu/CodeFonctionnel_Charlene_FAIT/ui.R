@@ -16,8 +16,8 @@ ui <- fluidPage(
                                              selectInput("catego", "Sélectionner une catégorie: ", 
                                                          selected = 2, multiple = FALSE,
                                                          choices = c("Paroles de chansons" = 1,  
-                                                                     "Répliques de films" = 2)),
-                                             
+                                                                     "Répliques de films" = 2)
+                                                         ),
   
                                              uiOutput("quest"),
                                              uiOutput("rep1"),
@@ -27,7 +27,7 @@ ui <- fluidPage(
                                              
                                              selectInput("repUser",
                                                          "Numéro de la réponse : ",
-                                                         selected = 4, multiple = FALSE,
+                                                         selected = 1, multiple = FALSE,
                                                          choices = c("Réponse 1" = 1, "Réponse 2" = 2, 
                                                                      "Réponse 3" = 3, "Réponse 4" = 4 )),
                                              
